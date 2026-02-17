@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+body {
+  background: radial-gradient(1200px 600px at 50% 10%, #1e293b 0%, #020617 60%, #020617 100%);
+}
+
+/* Micro animação flutuante do hero */
+.float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Linha F1 animada */
+.speed-line {
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  background-size: 200% 100%;
+  animation: speed 3s linear infinite;
+}
+
+@keyframes speed {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Onda 3D fake no fundo */
+/* FUNDO ONDA 3D ANIMADA */
+/* Onda SVG animada (super leve) */
+.wave-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wave-svg {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: 20%;
+  opacity: 0.35;
+  animation: waveFloat 18s ease-in-out infinite alternate;
+}
+
+@keyframes waveFloat {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+
+  100% {
+    transform: translateX(-60px) translateY(-30px);
+  }
+}
+
+@keyframes waveFloat1 {
+  0% {
+    transform: translateX(0px) translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateX(-40px) translateY(-20px) scale(1.05);
+  }
+
+  100% {
+    transform: translateX(-80px) translateY(-40px) scale(1);
+  }
+}
+
+@keyframes waveFloat2 {
+  0% {
+    transform: translateX(0px) translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateX(40px) translateY(20px) scale(1.04);
+  }
+
+  100% {
+    transform: translateX(80px) translateY(40px) scale(1);
+  }
+}
+
+/* Scroll reveal animations */
+/* Scroll reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: all 1s cubic-bezier(.2, .8, .2, 1);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Float suave */
+.float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Linha F1 */
+.speed-line {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(56, 189, 248, 0.8),
+      rgba(168, 85, 247, 0.8),
+      transparent);
+  background-size: 300% 100%;
+  animation: speed 2.5s linear infinite;
+  filter: blur(0.3px);
+  opacity: 0.9;
+}
+
+@keyframes speed {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+/* 🏎️ F1 car driving - centered */
+.f1-car-center {
+  position: absolute;
+  left: -500px;
+  animation: f1drivecenter 18s linear infinite;
+  will-change: transform;
+}
+
+@keyframes f1test {
+  from {
+    transform: translateX(-500px);
+  }
+
+  to {
+    transform: translateX(120vw);
+  }
+}
